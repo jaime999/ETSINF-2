@@ -2,9 +2,9 @@
 ###
 ## marzo de 2014
 ##
-## PR¡CTICA 13: SINCRONIZACI”N POR INTERRUPCIONES
+## PR√ÅCTICA 13: SINCRONIZACI√ìN POR INTERRUPCIONES
 ##
-## Programa usuario para la pr·ctica
+## Programa usuario para la pr√°ctica
 
 #------- Segmento de datos ---------#
 	.data		
@@ -12,7 +12,7 @@ T1:	.asciiz "Trabajando...\n"
 
 T2:	.asciiz "\nFin\n"
 
-#------- Segmento de cÛdigo ---------#
+#------- Segmento de c√≥digo ---------#
 	.text
     	.globl __start	
 
