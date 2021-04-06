@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="electioncharts.MainController">
+   <children>
+      <HBox spacing="10.0">
+         <children>
+            <Label prefWidth="60.0" text="Year" />
+            <ChoiceBox fx:id="yearChoice" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <TabPane tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Getting basic data">
+            <content>
+                  <VBox spacing="20.0">
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="60.0" text="Province" />
+                              <ChoiceBox fx:id="provinceChoice" disable="true" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label prefWidth="60.0" text="Region" />
+                              <ChoiceBox fx:id="regionChoice" disable="true" prefWidth="200.0" />
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label text="Comunidad Valenciana" />
+                                    <TextArea fx:id="cvInfo" prefHeight="300.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label text="Province" />
+                                    <TextArea fx:id="provinceInfo" prefHeight="300.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label text="Region (Comarca)" />
+                                    <TextArea fx:id="regionInfo" prefHeight="300.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+            </content>
+          </Tab>
+            <Tab text="Other data">
+              <content>
+                  <HBox spacing="10.0">
+                     <children>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Regions" />
+                              <ListView fx:id="regions" />
+                           </children>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Parties" />
+                              <ListView fx:id="parties" />
+                           </children>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+              </content>
+            </Tab>
+          <Tab text="Extensions">
+            <content>
+                  <VBox fx:id="mainParties" alignment="CENTER_LEFT" spacing="10.0">
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <HBox spacing="10.0">
+                           <children>
+                              <Label text="Search party by acronym:" />
+                              <TextField fx:id="partySearchField" />
+                              <Label fx:id="partyFoundLabel">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
